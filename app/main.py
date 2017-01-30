@@ -6,20 +6,6 @@ from urllib.parse import urlparse
 import xml.etree.ElementTree as ET
 import json
 
-def main(argv):
-    for v in argv:
-        print(v)
-
-    for line in sys.stdin:
-        line = line.rstrip()
-
-    keywords = [str.strip() for str in line.split(",")]
-
-
-    numFounds = reqAPI(keywords)
-
-    print(json.dumps({'name':max(numFounds.items(), key=lambda x:x[1])[0], 'count':max(numFounds.values())}))
-
 def urlEncode(url):
     p = urlparse(url)
     query = urllib.parse.quote_plus(p.query, safe='=&')
@@ -55,4 +41,13 @@ def reqAPI(keywords):
         numFounds[keyword] = int(root[2].attrib['numFound'])
 
     return numFounds
-main([])
+
+def main(argv):
+    keywords = argv
+
+    numFounds = reqAPI(keywords)
+
+    name = max(numFounds.items(),key=lambda x:x[1])[0]
+    count = max(numFounds.values())
+
+    print("{\"name\":\"" + name + "\",\"count\":" + str(count) + "}")
