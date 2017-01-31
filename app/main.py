@@ -18,26 +18,20 @@ def urlEncode(url):
     return url
 
 def reqAPI(keywords):
-
     numFounds = OrderedDict()
-
     baseurl = 'http://54.92.123.84/search?ackey=869388c0968ae503614699f99e09d960f9ad3e12&sort=ReleaseDate asc&rows=1'
 
     for keyword in keywords:
         query = ''
 
-
         query = 'q=Body:' + keyword
-
         url = baseurl + '&' + query
-
         req = urllib.request.Request(urlEncode(url))
 
         with urllib.request.urlopen(req) as response:
             XmlData = response.read()
 
         root = ET.fromstring(XmlData)
-
         numFounds[keyword] = int(root[2].attrib['numFound'])
 
     return numFounds
