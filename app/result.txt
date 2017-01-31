@@ -1,0 +1,95 @@
+% codecheck
+codecheck version 0.6.1
+codecheck: appCommand: python3 index.py
+codecheck: testCommand: mocha -R tap
+Start build: npm install
+npm WARN challenge-asahi-api@1.0.0 No repository field.
+npm WARN challenge-asahi-api@1.0.0 No license field.
+Finish build: npm install (730ms)
+Start build: pip3 install -r requirements.txt
+You must give at least one requirement to install (see "pip help install")
+Finish build: pip3 install -r requirements.txt (401ms)
+1..25
+[ 'メジャー・リーグ' ]
+{"name":"メジャー・リーグ","count":23}
+ok 1 jsontest メジャー・リーグ -> {"name":"メジャー・リーグ","count":23}
+[ 'AKB', 'NMB', 'HKT', 'SKE', 'JKT' ]
+{"name":"AKB","count":294}
+ok 2 jsontest AKB,NMB,HKT,SKE,JKT -> {"name":"AKB","count":294}
+[ 'ヒラリー・クリントン', 'ドナルド・トランプ' ]
+{"name":"ヒラリー・クリントン","count":172}
+ok 3 jsontest ヒラリー・クリントン,ドナルド・トランプ -> {"name":"ヒラリー・クリントン","count":172}
+[ '希望', '絶望' ]
+{"name":"希望","count":4641}
+ok 4 jsontest 希望,絶望 -> {"name":"希望","count":4641}
+[ 'おでん', 'うどん' ]
+{"name":"うどん","count":198}
+ok 5 jsontest おでん,うどん -> {"name":"うどん","count":198}
+[ 'うでん', 'おどん' ]
+{"name":"うでん","count":290}
+ok 6 jsontest うでん,おどん -> {"name":"うでん","count":290}
+[ 'ハロウィン', 'ハロウィーン' ]
+{"name":"ハロウィーン","count":99}
+ok 7 jsontest ハロウィン,ハロウィーン -> {"name":"ハロウィーン","count":99}
+[ '仮面ライダー', 'ウルトラマン' ]
+{"name":"ウルトラマン","count":97}
+ok 8 jsontest 仮面ライダー,ウルトラマン -> {"name":"ウルトラマン","count":97}
+[ 'UNHCR', 'UNICEF' ]
+{"name":"UNHCR","count":94}
+ok 9 jsontest UNHCR,UNICEF -> {"name":"UNHCR","count":94}
+[ 'ISIS', 'ISIL', 'イスラム国' ]
+{"name":"イスラム国","count":1860}
+ok 10 jsontest ISIS,ISIL,イスラム国 -> {"name":"イスラム国","count":1860}
+[ 'シリア', 'ウクライナ' ]
+{"name":"シリア","count":1949}
+ok 11 jsontest シリア,ウクライナ -> {"name":"シリア","count":1949}
+[ 'IoT', 'VR', 'AR' ]
+{"name":"IoT","count":67}
+ok 12 jsontest IoT,VR,AR -> {"name":"IoT","count":67}
+[ 'うどん', 'そば', 'らーめん' ]
+{"name":"そば","count":1332}
+ok 13 jsontest うどん,そば,らーめん -> {"name":"そば","count":1332}
+[ 'つけ麺', 'まぜそば', '油そば' ]
+{"name":"つけ麺","count":4}
+ok 14 jsontest つけ麺,まぜそば,油そば -> {"name":"つけ麺","count":4}
+[ 'グーグル', 'アップル', 'マイクロソフト', 'アマゾン' ]
+{"name":"アップル","count":513}
+ok 15 jsontest グーグル,アップル,マイクロソフト,アマゾン -> {"name":"アップル","count":513}
+[ 'Google', 'Apple', 'Microsoft', 'Amazon' ]
+{"name":"Google","count":15}
+ok 16 jsontest Google,Apple,Microsoft,Amazon -> {"name":"Google","count":15}
+[ '安心して下さい、穿いてますよ。' ]
+{"name":"安心して下さい、穿いてますよ。","count":0}
+ok 17 jsontest 安心して下さい、穿いてますよ。 -> {"name":"安心して下さい、穿いてますよ。","count":0}
+[ 'ジャーナリズム' ]
+{"name":"ジャーナリズム","count":248}
+ok 18 jsontest ジャーナリズム -> {"name":"ジャーナリズム","count":248}
+[ '五郎丸歩', 'ドローン', '松岡修造' ]
+{"name":"ドローン","count":200}
+ok 19 jsontest 五郎丸歩,ドローン,松岡修造 -> {"name":"ドローン","count":200}
+[ '五郎丸歩', '松岡修造' ]
+{"name":"五郎丸歩","count":58}
+ok 20 jsontest 五郎丸歩,松岡修造 -> {"name":"五郎丸歩","count":58}
+[ '民主党', '自民党' ]
+{"name":"自民党","count":5778}
+ok 21 jsontest 民主党,自民党 -> {"name":"自民党","count":5778}
+[ '上院', '下院' ]
+{"name":"上院","count":800}
+ok 22 jsontest 上院,下院 -> {"name":"上院","count":800}
+[ '衆議院', '参議院' ]
+{"name":"衆議院","count":291}
+ok 23 jsontest 衆議院,参議院 -> {"name":"衆議院","count":291}
+[ '報道の自由', 'Freedom of Press' ]
+{"name":"報道の自由","count":198}
+ok 24 jsontest 報道の自由,Freedom of Press -> {"name":"報道の自由","count":198}
+[ 'セ・リーグ', 'パ・リーグ' ]
+{"name":"セ・リーグ","count":562}
+ok 25 jsontest セ・リーグ,パ・リーグ -> {"name":"セ・リーグ","count":562}
+# tests 25
+# pass 25
+# fail 0
+
+codecheck: Finish with code 0
+codecheck: tests  : 25
+codecheck: success: 25
+codecheck: failure: 0
